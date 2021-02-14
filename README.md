@@ -4,7 +4,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 ## Before you setup
 - Make sure you have a stable and fast internet connection. Setting up a new machine requires lots of downloads.
 - Please run one step at a time and allow it to succeed before starting next steps.
-- Open this repo in a browser on your earlier mac to follow the first few steps from its readme before you can open it on your new M1.
+- Open this repo in a browser on your earlier mac to follow the first few steps from its readme before you can open it on your new apple silicon mac.
 
 ## Initial steps
 - Setup your user account and log into your Apple account during initial system setup. You may need your old mac to get the 2-factor authentication code to log into your new machine

@@ -29,6 +29,10 @@ OR
   ```
   xcode-select --install
   ```
+- If you need Xcode, please login to your apple account in AppStore and download/install Xcode. Then, set the command-line tools directory to point to Xcode:
+  ```
+  sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+  ```
 - Install Rosetta 2 (which is the x86_64 emulation layer for M1s and will allow running legacy intel architecture programs on M1):
   ```
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license

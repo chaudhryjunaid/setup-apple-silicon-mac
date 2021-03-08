@@ -8,7 +8,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 
 ## Initial steps
 - Setup your user account and log into your Apple account during initial system setup. You may need your old mac to get the 2-factor authentication code to log into your new machine
-- If airdrop is working for you and you want to use your existing ssh key, AirDrop your existing SSH keys (either id_rsa and id_rsa.pub OR id_ed25519 and id_ed25519.pub) to your apple silicon mac and put them in ~/.ssh folder
+- A) If airdrop is working for you and you want to use your existing ssh key, AirDrop your existing SSH keys (either id_rsa and id_rsa.pub OR id_ed25519 and id_ed25519.pub) to your apple silicon mac and put them in ~/.ssh folder
   ```
   mkdir ~/.ssh
   cp ~/Downloads/id_rsa* ~/.ssh
@@ -16,9 +16,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   cp ~/Downloads/id_ed25519* ~/.ssh
   ```
 
-OR
-
-- Generate a new pair by following [Github's instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and upload to [github keys page](https://github.com/settings/keys) after logging into github on Safari.
+- OR B) Generate a new pair by following [Github's instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and upload to [github keys page](https://github.com/settings/keys) after logging into github on Safari.
 
 - Login to github and open the readme in this repo: `https://github.com/chaudhryjunaid/setup-apple-silicon-mac` to follow the rest of these steps. Also, clone this repo on your apple silicon mac for later usage:
   ```

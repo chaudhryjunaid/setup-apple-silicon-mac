@@ -18,11 +18,6 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 
 - OR B) Generate a new pair by following [Github's instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and upload to [github keys page](https://github.com/settings/keys) after logging into github on Safari.
 
-- Login to github and open the readme in this repo: `https://github.com/chaudhryjunaid/setup-apple-silicon-mac` to follow the rest of these steps. Also, clone this repo on your apple silicon mac for later usage:
-  ```
-  cd ~
-  git clone git@github.com:chaudhryjunaid/setup-apple-silicon-mac.git
-  ```
 - Install XCode command line tools
   ```
   xcode-select --install
@@ -59,8 +54,14 @@ A guide on how to setup your new apple silicon mac for development. This repo do
     export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin";
   fi
   ```
+- Please restart all Terminal and TerminalRosetta windows for updated .zshrc to take effect.
   
 ## Install apps
+- Login to github and open the readme in this repo: `https://github.com/chaudhryjunaid/setup-apple-silicon-mac` to follow the rest of these steps. Also, clone this repo on your apple silicon mac for later usage:
+  ```
+  cd ~
+  git clone git@github.com:chaudhryjunaid/setup-apple-silicon-mac.git
+  ```
 - Open the arm Terminal and execute:
   ```
   which brew

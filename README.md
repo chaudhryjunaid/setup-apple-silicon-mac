@@ -93,7 +93,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   vim '+PlugClean!' +qall
   ```
 - Open iTerm Preferences, open Profiles tab, then text section and check `use a different font for non-ascii text` and select the font whose name starts with `Meslo` from the font selector to enable vim and powerline features correctly. If you do not like meslo, you can head over to powerline fonts repo on github, download your favorite font, install it and then select that font from the iTerm font menu.
-- Run the following commands to fix oh-my-zsh warnings:
+- Run the following commands to fix oh-my-zsh warnings ONLY IF you encouter warnings on iTerm / Terminal starup:
   ```
   chmod o-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /usr/local/share/zsh /usr/local/share/zsh/site-functions
   chmod g-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /usr/local/share/zsh /usr/local/share/zsh/site-functions

@@ -5,4 +5,6 @@ brew install iterm2
 brew install sequel-pro
 brew install google-chrome
 brew install firefox
+brew install postman
+brew install sublime-text
 

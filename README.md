@@ -97,7 +97,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   chmod o-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /usr/local/share/zsh /usr/local/share/zsh/site-functions
   chmod g-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /usr/local/share/zsh /usr/local/share/zsh/site-functions
   ```
-- Restart both arm and rosetta iTerms to start using oh-my-zsh, zsh plugins and nodejs binaries.
+- Restart both iTerm and Terminal.app as needed to start using oh-my-zsh, zsh plugins and nodejs binaries.
 
 ## List of installed software
 GUI apps:

@@ -8,6 +8,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 
 ## Initial steps
 - Setup your user account and log into your Apple account during initial system setup. You may need your old mac to get the 2-factor authentication code to log into your new machine
+- Update your macOS to the latest version available first thing as a best practice
 - Login to github and open the readme in this repo: `https://github.com/chaudhryjunaid/setup-apple-silicon-mac` on Safari to follow the rest of these steps.
 - A) If airdrop is working for you and you want to use your existing ssh key, AirDrop your existing SSH keys (either id_rsa and id_rsa.pub OR id_ed25519 and id_ed25519.pub) to your apple silicon mac and put them in ~/.ssh folder
   ```

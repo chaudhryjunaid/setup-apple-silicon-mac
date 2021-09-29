@@ -32,32 +32,10 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   ```
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   ```
-- Open Finder, goto Applications folder, then open the Utilities folder in it. There will be Terminal app in the utilities folder. Right click Terminal app in Finder, select `Duplicate` and then right click the duplicated terminal in Finder and click `Get Info`. In the info tab, check `open using Rosetta` checkbox and in the name section rename app to `TerminalRosetta.app`. From now on we will call the Terminal launched from the original Terminal app `the arm terminal` as it will execute arm binaries by default and we will call the Terminal launched from TerminalRosetta.app as `the rosetta terminal` as it will execute binaries in x86_64 mode by default. Close all original and duplicated terminal windows by selecting Quit from menu or icon right-click before re-opening for next commands.
-- Some commands will need to be run in the arm terminal and some in the rosetta terminal. Please make sure you are in the right terminal before executing commands to avoid messing up your setup. The following command which print `arm64` in arm terminal and `i386` or `x86_64` in the rosetta terminal:
-  ```
-  arch
-  ```
-  Always execute this command before each of the following steps to make sure you are in the right execution environment.
 - Install Homebrew using following in arm Terminal:
   ```
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ```
-- Now install homebrew using Rosetta 2 as well using TerminalRosetta.app:
-  ```
-  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  ```
-- Setup to use appropriate brew based on arch value and use bin folder of preferred arch first followed by the bin folder of the other arch by adding the following to your .zshrc. If .zshrc does not exist, you may create it by using `touch ~/.zshrc`. Then please open in vim or nano using `vim ~/.zshrc` and paste the following in the end.
-  ```
-  if [ "$(arch)" = "arm64" ]; then
-    eval $(/opt/homebrew/bin/brew shellenv);
-    export PATH="$PATH:/usr/local/bin:/usr/local/sbin";
-  else
-    eval $(/usr/local/bin/brew shellenv);
-    export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin";
-  fi
-  ```
-- Please restart all Terminal and TerminalRosetta windows for updated .zshrc to take effect.
-  
+  ```  
 ## Install apps
 - Clone this repo on your apple silicon mac:
   ```
@@ -75,7 +53,27 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   zsh arm-brew-cask.sh
   ```
   This command will install CLI and GUI apps for your new apple silicon mac including Slack, Zoom, Chrome, Sequel Pro, PSequel, and others. Please inspect above scripts if you want to find out what exactly is being installed.
-- Just like we did for Terminal using Finder, go to the Applications folder in Finder and duplicate iTerm, set the duplicated iTerm to run using Rosetta and rename it to `iTermRosetta.app`
+- Open Finder, goto Applications folder, then open the Utilities folder in it. There will be Terminal app in the utilities folder. Right click Terminal app in Finder and click `Get Info`. In the info tab, check `open using Rosetta` checkbox. From now on we will use iTerm as `the arm terminal` as it will execute arm binaries by default and we will use the Terminal app as `the rosetta terminal` as it will execute binaries in x86_64 mode by default. Close all original and duplicated terminal windows by selecting Quit from menu or icon right-click before re-opening for next commands.
+- Some commands will need to be run in the arm terminal and some in the rosetta terminal. Please make sure you are in the right terminal before executing commands to avoid messing up your setup. The following command which print `arm64` in arm terminal and `i386` or `x86_64` in the rosetta terminal:
+  ```
+  arch
+  ```
+  Always execute this command before each of the following steps to make sure you are in the right execution environment.
+- Now install homebrew using Rosetta 2 as well using Terminal.app:
+  ```
+  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  ```
+- Setup to use appropriate brew based on arch value and use bin folder of preferred arch first followed by the bin folder of the other arch by adding the following to your .zshrc. If .zshrc does not exist, you may create it by using `touch ~/.zshrc`. Then please open in vim or nano using `vim ~/.zshrc` and paste the following in the end.
+  ```
+  if [ "$(arch)" = "arm64" ]; then
+    eval $(/opt/homebrew/bin/brew shellenv);
+    export PATH="$PATH:/usr/local/bin:/usr/local/sbin";
+  else
+    eval $(/usr/local/bin/brew shellenv);
+    export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin";
+  fi
+  ```
+- Please restart all Terminal and iTerm windows for updated .zshrc to take effect.
 - If you use Visual Studio Code, open Visual Studio Code on your old computer, turn Settings Sync on by going to preferences and hitting the `Turn on Settings Sync` button and following its steps to upload your visual studio code settings to github. Next, open Visual Studio Code on apple silicon mac and turn on settings sync using the same account. If prompted, select `Replace local config` option to override local settings with your old machine's vscode settings.
 
 ## Basic system setup
@@ -88,7 +86,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   ansible-playbook macos-setup.yml --verbose
   ```
   This playbook will prompt you for your name and email and your preferred command line editor during its execution so that it may configure the system appropriately. Please keep an eye on the run for these prompts.
-- For finishing vim config, run the following in iTermRosetta.app for this step only(`which brew` should print /usr/local/bin/brew):
+- For finishing vim config, run the following in Terminal.app for this step only(`which brew` should print /usr/local/bin/brew):
   ```
   vim +PlugInstall +qall
   vim '+PlugClean!' +qall
@@ -111,6 +109,7 @@ GUI apps:
 - psequel
 - google-chrome
 - firefox
+- sublime-text
 
 Homebrew/command-line apps:
 - vim

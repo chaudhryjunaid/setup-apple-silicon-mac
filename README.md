@@ -24,7 +24,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   ```
   xcode-select --install
   ```
-- If you need Xcode, please login to your apple account in AppStore and download/install Xcode. Then, set the command-line tools directory to point to Xcode:
+- If you need Xcode, please login to your apple account in AppStore and download/install Xcode. After Xcode installation completes, launch Xcode and accept the license agreement, then wait for it to install components. Then, set the command-line tools directory to point to Xcode:
   ```
   sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
   ```

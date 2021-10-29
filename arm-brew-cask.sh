@@ -1,10 +1,11 @@
 brew install slack
-brew install visual-studio-code
 brew install zoom
 brew install iterm2
-brew install sequel-pro
 brew install google-chrome
 brew install firefox
-brew install postman
+brew install visual-studio-code
 brew install sublime-text
-
+brew install sublime-merge
+brew install sequel-ace
+brew install postman
+brew install cyberduck

@@ -50,6 +50,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   cd ~/setup-apple-silicon-mac
   zsh arm-brew-cli.sh
   zsh arm-brew-cask.sh
+  zsh opt-brew.sh # this is optional, please look into opt-brew.sh file to see the programs that will install
   ```
   This command will install CLI and GUI apps for your new apple silicon mac including Slack, Zoom, Chrome, Sequel Pro, PSequel, and others. Please inspect above scripts if you want to find out what exactly is being installed.
 - Open Finder, goto Applications folder, then open the Utilities folder in it. There will be Terminal app in the utilities folder. Right click Terminal app in Finder and click `Get Info`. In the info tab, check `open using Rosetta` checkbox. From now on we will use iTerm as `the arm terminal` as it will execute arm binaries by default and we will use the Terminal app as `the rosetta terminal` as it will execute binaries in x86_64 mode by default. Close all original and duplicated terminal windows by selecting Quit from menu or icon right-click before re-opening for next commands.
@@ -111,6 +112,7 @@ GUI apps:
 - sublime-text
 - sublime-merge
 - postico
+- tunnelblick
 
 Homebrew/command-line apps:
 - vim
@@ -152,3 +154,15 @@ Homebrew/command-line apps:
 - tldr
 - procs
 - httpie
+
+Optional commercial apps:
+- istat menus
+- ngrok
+- beyond compare
+- goodsync
+- tableplus
+
+Optional OSS apps:
+- licecap
+- vlc
+- caffeine

@@ -30,3 +30,12 @@ brew install git
 brew install fzf
 brew install awscli
 brew install ansible
+brew install bat
+brew install exa
+brew install git-delta
+brew install tldr
+brew install glances
+brew install procs
+brew install httpie
+brew install ncdu
+brew install duf

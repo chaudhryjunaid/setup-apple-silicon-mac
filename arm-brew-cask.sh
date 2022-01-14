@@ -7,5 +7,6 @@ brew install visual-studio-code
 brew install sublime-text
 brew install sublime-merge
 brew install sequel-ace
+brew install postico
 brew install postman
 brew install cyberduck

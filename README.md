@@ -17,7 +17,6 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   OR
   cp ~/Downloads/id_ed25519* ~/.ssh
   ```
-
 - OR B) Generate a new pair by following [Github's instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and upload to [github keys page](https://github.com/settings/keys) after logging into github on Safari.
 
 - Install XCode command line tools
@@ -105,11 +104,13 @@ GUI apps:
 - visual-studio-code
 - zoom
 - iterm2
-- sequel-pro
+- sequel-ace
 - psequel
 - google-chrome
 - firefox
 - sublime-text
+- sublime-merge
+- postico
 
 Homebrew/command-line apps:
 - vim
@@ -144,3 +145,10 @@ Homebrew/command-line apps:
 - awscli
 - ansible
 - speedtest-cli
+- bat
+- glances
+- exa
+- git-delta(delta)
+- tldr
+- procs
+- httpie

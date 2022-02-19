@@ -44,6 +44,8 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 - Open the arm Terminal and execute:
   ```
   which brew
+  eval $(/opt/homebrew/bin/brew shellenv); # if brew is not detected
+  which brew # should be detected now
   ```
   Above command should print /opt/homebrew/bin/brew if you are in the arm terminal. If not, you are not in arm terminal. Please make sure you are in the arm terminal for below commands to run brew cask and cli installs:
   ```

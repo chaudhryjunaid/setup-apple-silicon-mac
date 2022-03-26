@@ -1,6 +1,7 @@
 brew install the_silver_searcher
 brew install speedtest-cli
 brew install vim
+brew install neovim
 brew install zsh
 brew install liquidprompt
 brew install aria2

@@ -40,3 +40,4 @@ brew install procs
 brew install httpie
 brew install ncdu
 brew install duf
+brew install zoxide

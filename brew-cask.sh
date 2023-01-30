@@ -4,6 +4,7 @@ brew install firefox
 brew install sublime-text
 brew install sublime-merge
 brew install visual-studio-code
+
 #brew install postman
 #brew install cyberduck
 #brew install tunnelblick

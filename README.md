@@ -38,13 +38,11 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   eval $(/opt/homebrew/bin/brew shellenv); # if brew is not detected
   which brew # should be detected now; we're ready to brew now
   ```
-- The scripts arm-brew-cli.sh, arm-brew-cask.sh, opt-brew.sh, etc, will install CLI and GUI apps for your new apple silicon mac including Chrome, Sublime Text, and others. You can omit corresponding installs by commenting out relevant lines. Please inspect and modify these scripts to ensure what you require is being installed only.
+- The scripts brew-cli.sh, brew-cask.sh, opt-brew.sh, etc, will install CLI and GUI apps for your new apple silicon mac including Chrome, Sublime Text, and others. You can omit corresponding installs by commenting out relevant lines. Please inspect and modify these scripts to ensure what you require is being installed only. You may even comment entire subscripts from install.sh if you require so.
 - Execute the following commands to run specified installs:
   ```
   cd ~/setup-apple-silicon-mac
-  zsh arm-brew-cli.sh
-  zsh arm-brew-cask.sh
-  zsh opt-brew.sh # installs optional software not commonly needed or commercial software which might need a license to use beyond trial
+  ./install.sh
   ```
 - Open Finder, goto Applications folder, then open the Utilities folder in it. There will be Terminal app in the utilities folder. Right click Terminal app in Finder and click `Get Info`. In the info tab, check `open using Rosetta` checkbox. From now on we will use iTerm as `the arm terminal` as it will execute arm binaries by default and we will use the Terminal app as `the rosetta terminal` as it will execute binaries in x86_64 mode by default. Close all original and duplicated terminal windows by selecting Quit from menu or icon right-click before re-opening for next commands.
 - If you use Visual Studio Code, open Visual Studio Code on your old computer, turn Settings Sync on by going to preferences and hitting the `Turn on Settings Sync` button and following its steps to upload your visual studio code settings to github. Next, open Visual Studio Code on apple silicon mac and turn on settings sync using the same account. If prompted, select `Replace local config` option to override local settings with your old machine's vscode settings.

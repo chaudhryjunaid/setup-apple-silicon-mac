@@ -22,7 +22,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   ```
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   ```
-- Install Homebrew using following in arm Terminal:
+- Install Homebrew using following in Terminal.app:
   ```
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```  

@@ -58,8 +58,8 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   This playbook will prompt you for your name and email and your preferred command line editor during its execution so that it may configure the system appropriately. Please keep an eye on the run for these prompts.
 - For finishing (n)vim config:
   ```
-  vim +PlugInstall +qall
-  vim '+PlugClean!' +qall
+  nvim +PlugInstall +qall
+  nvim '+PlugClean!' +qall
   ```
 - Open iTerm Preferences, open Profiles tab, then text section and check `use a different font for non-ascii text` and select the font whose name starts with `Meslo` from the font selector to enable vim and powerline features correctly. If you do not like meslo, you can head over to powerline fonts repo on github, download your favorite font, install it and then select that font from the iTerm font menu.
 - Restart your terminal to activate oh-my-zsh and other goodies.

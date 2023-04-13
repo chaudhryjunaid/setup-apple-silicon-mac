@@ -62,6 +62,10 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   nvim +PlugInstall +qall
   nvim '+PlugClean!' +qall
   ```
+- If you don't want to use vim as the default editor in terminal which this setup repo configures as default, please edit the file ~/.zshrc.custom and at the start of the file replace vim on line 3 with nano inside double quotes and nvim on line 6 with the string next to your editor of choice below (also inside double quotes):
+  - vscode: "code --wait"
+  - sublime-text: "subl -w"
+  - nano: "nano"
 - Open iTerm Preferences, open Profiles tab, then text section and check `use a different font for non-ascii text` and select the font whose name starts with `Meslo` from the font selector to enable vim and powerline features correctly. If you do not like meslo, you can head over to powerline fonts repo on github, download your favorite font, install it and then select that font from the iTerm font menu.
 - Restart your terminal to activate oh-my-zsh and other goodies.
 

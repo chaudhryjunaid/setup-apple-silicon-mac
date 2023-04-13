@@ -1,5 +1,5 @@
 # setup-apple-silicon-mac
-A guide on how to setup your new apple silicon mac for development. This repo does not include any specific tech-stacks. Rather, it focuses on the basics of system setup that almost every setup will benefit from.
+This repo includes scripts and a guide to setup your new apple silicon mac for development (with alternate steps for intel macs if you happen to have one). It does not focus on any specific tech-stack. Rather, it focuses on the basics of system setup that almost every setup will benefit from.
 
 ## Before you setup
 - Make sure you have a stable and fast internet connection. Setting up a new machine requires lots of downloads.
@@ -14,7 +14,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
   ```
   xcode-select --install
   ```
-- If you need Xcode, please login to your apple account in AppStore and download/install Xcode. After Xcode installation completes, launch Xcode and accept the license agreement, then wait for it to install components. Then, set the command-line tools directory to point to Xcode:
+- (Optional) If you do need Xcode, please login to your apple account in AppStore and download/install Xcode. After Xcode installation completes, launch Xcode and accept the license agreement, then wait for it to install components. Then, set the command-line tools directory to point to Xcode:
   ```
   sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
   ```
@@ -25,9 +25,9 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 - Install Homebrew using following in Terminal.app:
   ```
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ```  
+  ```
 ## Install apps
-- Clone this repo on your apple silicon mac:
+- Clone this repo on your mac:
   ```
   cd ~
   git clone git@github.com:chaudhryjunaid/setup-apple-silicon-mac.git
@@ -35,16 +35,17 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 - Open Terminal.app and execute:
   ```
   which brew
-  eval $(/opt/homebrew/bin/brew shellenv); # if brew is not detected
+  eval $(/opt/homebrew/bin/brew shellenv); # if brew is not detected and you are on apple silicon
+  eval $(/usr/local/bin/brew shellenv); # if brew is not detected and you are on an intel mac
   which brew # should be detected now; we're ready to brew now
   ```
+- Inspect all the brew install scripts and comment out installs that you don't want as well as uncomment any installs that you want that are disabled by default. Remember `#` is the line comment character for shell scripts.
 - The scripts brew-cli.sh, brew-cask.sh, opt-brew.sh, etc, will install CLI and GUI apps for your new apple silicon mac including Chrome, Sublime Text, and others. You can omit corresponding installs by commenting out relevant lines. Please inspect and modify these scripts to ensure what you require is being installed only. You may even comment entire subscripts from install.sh if you require so.
 - Execute the following commands to run specified installs:
   ```
   cd ~/setup-apple-silicon-mac
   ./install.sh
   ```
-- Open Finder, goto Applications folder, then open the Utilities folder in it. There will be Terminal app in the utilities folder. Right click Terminal app in Finder and click `Get Info`. In the info tab, check `open using Rosetta` checkbox. From now on we will use iTerm as `the arm terminal` as it will execute arm binaries by default and we will use the Terminal app as `the rosetta terminal` as it will execute binaries in x86_64 mode by default. Close all original and duplicated terminal windows by selecting Quit from menu or icon right-click before re-opening for next commands.
 - If you use Visual Studio Code, open Visual Studio Code on your old computer, turn Settings Sync on by going to preferences and hitting the `Turn on Settings Sync` button and following its steps to upload your visual studio code settings to github. Next, open Visual Studio Code on apple silicon mac and turn on settings sync using the same account. If prompted, select `Replace local config` option to override local settings with your old machine's vscode settings.
 
 ## Basic system setup
@@ -66,7 +67,7 @@ A guide on how to setup your new apple silicon mac for development. This repo do
 
 ## List of included software
 
-- Some included software may be disabled by default; you can enable installation of a disabled app by uncommenting the relevant line in the corresponding script
+- Some included software may be disabled by default; you can enable installation of a disabled app by uncommenting the relevant line in the corresponding brew script
 
 GUI apps:
 - iterm2
@@ -75,8 +76,6 @@ GUI apps:
 - sublime-text
 - sublime-merge
 - visual-studio-code
-- slack
-- zoom
 
 CLI apps:
 - zsh

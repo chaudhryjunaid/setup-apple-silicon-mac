@@ -15,7 +15,6 @@ brew install readline
 brew install reattach-to-user-namespace
 brew install tmux
 brew install screen
-#brew install lua
 #brew install awscli
 brew install speedtest-cli
 brew install ansible

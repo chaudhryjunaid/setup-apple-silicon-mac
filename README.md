@@ -18,7 +18,7 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ```
   sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
   ```
-- Install Rosetta 2 (which is the x86_64 emulation layer for M1s and will allow running legacy intel architecture programs on M1):
+- If you need to run legacy apps (which is unlikely now that apple silicon stacks have matured!), install Rosetta 2 (which is the x86_64 emulation layer for M1s and will allow running legacy intel architecture programs on M1):
   ```
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   ```

@@ -5,7 +5,8 @@ brew install gh
 brew install liquidprompt
 brew install fzf
 brew install the_silver_searcher
-#brew install nmap
+brew install ripgrep
+
 brew install binutils
 brew install inetutils
 brew install coreutils
@@ -15,8 +16,8 @@ brew install readline
 brew install reattach-to-user-namespace
 brew install tmux
 brew install screen
+
 #brew install awscli
-brew install speedtest-cli
 brew install ansible
 brew install aria2
 brew install wget
@@ -34,6 +35,8 @@ brew install git-delta
 brew install tldr
 brew install glances
 brew install procs
+
 #brew install ncdu
 #brew install duf
 #brew install lynx
+#brew install nmap

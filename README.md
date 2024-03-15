@@ -65,7 +65,7 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   - vscode: "code --wait"
   - sublime-text: "subl -w"
   - nano: "nano"
-- Open iTerm Preferences, open Profiles tab, then text section and check `use a different font for non-ascii text` and select the font whose name starts with `Meslo` from the font selector to enable vim and powerline features correctly. If you do not like meslo, you can head over to powerline fonts repo on github, download your favorite font, install it and then select that font from the iTerm font menu.
+- Open iTerm Preferences, open Profiles tab, then text section and select the nerd font installed during setup font whose name starts with `Meslo` from the font selector to enable vim/neovim and powerline features correctly. If you do not like meslo, you can install another nerd font from brew and select that instead. You may execute `brew search font` or `brew search nerd` for this.
 - Restart your terminal to activate oh-my-zsh and other goodies.
 
 ## List of included software

@@ -57,10 +57,9 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ansible-playbook macos-setup.yml --verbose
   ```
   This playbook will prompt you for your name and email and your preferred command line editor during its execution so that it may configure the system appropriately. Please keep an eye on the run for these prompts.
-- For finishing (n)vim config:
+- For finishing neovim config:
   ```
-  nvim +PlugInstall +qall
-  nvim '+PlugClean!' +qall
+  nvim +MasonInstallAll
   ```
 - If you don't want to use vim as the default editor in terminal which this setup repo configures as default, please edit the file ~/.zshrc.custom and at the start of the file replace vim on line 3 with nano inside double quotes and nvim on line 6 with the string next to your editor of choice below (also inside double quotes):
   - vscode: "code --wait"
@@ -97,13 +96,11 @@ CLI apps:
 - htop
 - cloc
 - lynx
-- nmap
 - readline
 - lua
 - tmux
 - screen
 - ansible
-- speedtest-cli
 - aria2
 - wget
 - tree
@@ -130,3 +127,4 @@ Optional OSS apps:
 - licecap
 - vlc
 - caffeine
+

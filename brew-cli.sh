@@ -1,5 +1,6 @@
 brew install zsh
 brew install neovim
+brew install vim
 brew install git
 brew install gh
 brew install liquidprompt

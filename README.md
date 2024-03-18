@@ -18,7 +18,7 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ```
   sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
   ```
-- If you need to run legacy apps (which is unlikely now that apple silicon stacks have matured!), install Rosetta 2 (which is the x86_64 emulation layer for M1s and will allow running legacy intel architecture programs on M1):
+- (Optional) If you need to run legacy apps (which is unlikely now that apple silicon stacks have matured!), install Rosetta 2 (which is the x86_64 emulation layer for M1s and will allow running legacy intel architecture programs on M1):
   ```
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   ```
@@ -26,6 +26,7 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ```
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
+
 ## Install apps
 - Clone this repo on your mac:
   ```
@@ -57,11 +58,7 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ansible-playbook macos-setup.yml --verbose
   ```
   This playbook will prompt you for your name and email and your preferred command line editor during its execution so that it may configure the system appropriately. Please keep an eye on the run for these prompts.
-- For finishing neovim config:
-  ```
-  nvim +MasonInstallAll
-  ```
-- If you don't want to use vim as the default editor in terminal which this setup repo configures as default, please edit the file ~/.zshrc.custom and at the start of the file replace vim on line 3 with nano inside double quotes and nvim on line 6 with the string next to your editor of choice below (also inside double quotes):
+- If you don't want to use (neo/)vim as the default editor in terminal which this setup repo configures as default, please edit the file ~/.zshrc.custom and at the start of the file replace vim on line 3 with nano inside double quotes and nvim on line 6 with the string next to your editor of choice below (also inside double quotes):
   - vscode: "code --wait"
   - sublime-text: "subl -w"
   - nano: "nano"
@@ -69,25 +66,23 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
 - Restart your terminal to activate oh-my-zsh and other goodies.
 
 ## List of included software
-
 - Some included software may be disabled by default; you can enable installation of a disabled app by uncommenting the relevant line in the corresponding brew script
 
 GUI apps:
 - iterm2
 - google-chrome
-- firefox
 - sublime-text
 - sublime-merge
 - visual-studio-code
 
 CLI apps:
 - zsh
+- neovim
 - vim
 - git
 - liquidprompt
 - gh
 - fzf
-- the_silver_searcher
 - binutils
 - inetutils
 - coreutils

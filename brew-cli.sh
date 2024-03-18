@@ -5,7 +5,6 @@ brew install git
 brew install gh
 brew install liquidprompt
 brew install fzf
-brew install the_silver_searcher
 brew install ripgrep
 
 brew install binutils

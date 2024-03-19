@@ -25,12 +25,10 @@ brew install tree
 brew install jq
 brew install ack
 brew install cmake
-brew install cowsay
 brew install htop
 brew install cloc
 brew install mc
 brew install bat
-brew install exa
 brew install git-delta
 brew install tldr
 brew install glances

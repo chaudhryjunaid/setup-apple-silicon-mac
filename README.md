@@ -1,5 +1,5 @@
 # setup-apple-silicon-mac
-This repo includes scripts and a guide to setup your new apple silicon mac for development (with alternate steps for intel macs if you happen to have one). It does not focus on any specific tech-stack. Rather, it focuses on the basics of system setup that almost every setup will benefit from.
+This repo includes scripts and a guide to setup a fresh install of macos for development (alternate steps have been added for supporting legacy intel macs also). It does not focus on any specific tech-stack. Rather, it focuses on the basics of system setup that almost every setup will benefit from. However, we install nodejs, and python nonetheless.
 
 ## Before you setup
 - Make sure you have a stable and fast internet connection. Setting up a new machine requires lots of downloads.
@@ -36,8 +36,10 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
 - Open Terminal.app and execute:
   ```
   which brew
-  eval $(/opt/homebrew/bin/brew shellenv); # if brew is not detected and you are on apple silicon
-  eval $(/usr/local/bin/brew shellenv); # if brew is not detected and you are on an intel mac
+  # if brew is not detected and you are on apple silicon
+  eval $(/opt/homebrew/bin/brew shellenv); 
+  # if brew is not detected and you are on an intel mac
+  eval $(/usr/local/bin/brew shellenv); 
   which brew # should be detected now; we're ready to brew now
   ```
 - Inspect all the brew install scripts and comment out installs that you don't want as well as uncomment any installs that you want that are disabled by default. Remember `#` is the line comment character for shell scripts.
@@ -79,6 +81,8 @@ GUI apps:
 - sublime-text
 - sublime-merge
 - visual-studio-code
+- pgadmin4
+- pycharm(/ce)
 
 CLI apps:
 - zsh
@@ -88,6 +92,8 @@ CLI apps:
 - liquidprompt
 - gh
 - fzf
+- pyenv
+- postgres
 - binutils
 - inetutils
 - coreutils

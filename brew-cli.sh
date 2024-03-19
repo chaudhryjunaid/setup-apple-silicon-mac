@@ -27,7 +27,6 @@ brew install ack
 brew install cmake
 brew install htop
 brew install cloc
-brew install mc
 brew install bat
 brew install git-delta
 brew install tldr
@@ -36,5 +35,4 @@ brew install procs
 
 #brew install ncdu
 #brew install duf
-#brew install lynx
 #brew install nmap

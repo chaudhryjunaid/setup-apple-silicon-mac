@@ -48,10 +48,10 @@ This repo includes scripts and a guide to setup your new apple silicon mac for d
   ./install.sh
   ```
 - If you want to configure neovim as an IDE with the LazyVim config distribution, execute the following script:
-```
-  cd ~/setup-apple-silicon-mac
-  ./setup-nvim.sh
-```
+  ```
+    cd ~/setup-apple-silicon-mac
+    ./setup-nvim.sh
+  ```
 - If you use Visual Studio Code, open Visual Studio Code on your old computer, turn Settings Sync on by going to preferences and hitting the `Turn on Settings Sync` button and following its steps to upload your visual studio code settings to github. Next, open Visual Studio Code on apple silicon mac and turn on settings sync using the same account. If prompted, select `Replace local config` option to override local settings with your old machine's vscode settings.
 
 ## Basic system setup

@@ -21,6 +21,7 @@ brew install screen
 brew install ansible
 brew install aria2
 brew install wget
+brew install lsd
 brew install tree
 brew install jq
 brew install ack

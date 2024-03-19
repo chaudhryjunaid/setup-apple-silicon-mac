@@ -13,8 +13,8 @@ brew install coreutils
 brew install findutils
 brew install moreutils
 brew install readline
-brew install reattach-to-user-namespace
-brew install tmux
+#brew install reattach-to-user-namespace
+#brew install tmux
 brew install screen
 
 #brew install awscli

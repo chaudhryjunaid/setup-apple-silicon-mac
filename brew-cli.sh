@@ -7,11 +7,11 @@ brew install liquidprompt
 brew install fzf
 brew install ripgrep
 
-brew install binutils
+#brew install binutils
 brew install inetutils
 brew install coreutils
 brew install findutils
-brew install moreutils
+#brew install moreutils
 brew install readline
 #brew install reattach-to-user-namespace
 #brew install tmux

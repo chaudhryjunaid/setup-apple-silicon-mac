@@ -5,6 +5,7 @@ brew install sublime-text
 brew install sublime-merge
 
 #brew install postman
+#brew install soapui
 #brew install cyberduck
 #brew install slack
 #brew install zoom

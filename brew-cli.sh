@@ -1,5 +1,4 @@
 brew install zsh
-#brew install neovim
 brew install vim
 brew install git
 brew install gh
@@ -26,8 +25,8 @@ brew install cloc
 brew install bat
 brew install git-delta
 brew install tldr
-brew install glances
-brew install procs
+#brew install glances
+#brew install procs
 
 #brew install ncdu
 #brew install duf

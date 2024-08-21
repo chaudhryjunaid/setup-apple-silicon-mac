@@ -1,3 +1,7 @@
+## This repo has been archived
+The info in the repo has been merged to, and is usable from the following repo:
+  https://github.com/chaudhryjunaid/setup-macos
+
 # setup-apple-silicon-mac
 This repo includes scripts and a guide to setup a fresh install of macos for development (alternate steps have been added for supporting legacy intel macs also). It does not focus on any specific tech-stack. Rather, it focuses on the basics of system setup that almost every setup will benefit from. However, we install nodejs, and python nonetheless.
 
